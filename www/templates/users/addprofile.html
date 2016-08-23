@@ -1,0 +1,142 @@
+<style>
+.ion-google-place-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+}
+
+
+input.ion-google-place[readonly]{
+    background-color: transparent;
+    cursor: text;
+}
+</style>
+<ion-view view-title="Profile">
+ <ion-header class="bar bar-header login-header">
+  <a href="javascript:void(0)" class="back-btn"><i class="icon ion-chevron-left"></i></a>
+   <h1 class="title">Profile</h1>
+ </ion-header>
+<ion-content class="home">
+  <div class="login-form">
+    <div class="row">
+      <div class="col-80 col-offset-10">
+        <form name="profile_form" id="profile" class="list" ng-submit="addprofile(profile)" novalidate>
+            <div class="row">
+              <div class="col">
+                <div class="title"> 
+                  <img alt="Company Logo" height="156" src="img/logo.png">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+
+                <div class="list">
+
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.firstname.$invalid && !profile_form.firstname.$pristine}">
+                            <input type="text" ng-pattern="/^[a-zA-Z]*$/" ng-model="profile.first_name"  name="firstname" placeholder="First name" required maxlength="10">
+                          </label>
+                          <div class="form-error" ng-show="profile_form.firstname.$invalid && !profile_form.firstname.$pristine">Enter a valid firstname of max 10 character.
+                          </div>
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.lastname.$invalid &&  !profile_form.lastname.$pristine}">
+                              <input type="text" ng-pattern="/^[a-zA-Z]*$/" ng-model="profile.last_name"  name="lastname" placeholder="Last name" required maxlength="10">
+                          </label>
+                          <div class="form-error" ng-show="profile_form.lastname.$invalid && !profile_form.lastname.$pristine">Enter a valid lastname of max 10 character.
+                          </div>
+
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.phone.$invalid && !profile_form.phone.$pristine}">
+                              <input type="text"   ng-model="profile.phone" mask="(999) 999-9999" name="phone" placeholder="Phone" required>
+                          </label>
+                          <div class="form-error" ng-show="profile_form.phone.$invalid && !profile_form.phone.$pristine" >Enter a valid phone number.
+                          </div>
+
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.zipcode.$invalid && !profile_form.zipcode.$pristine}">
+                              <input type="text"  maxlength="6" ng-model="profile.zipcode"  mask="9" repeat="6" name="zipcode" placeholder="Zip code" required>
+                          </label>
+                          <div class="form-error" ng-show="profile_form.zipcode.$invalid && !profile_form.zipcode.$pristine" >Enter a valid zipcode.
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mobile-size">
+                      <div class="col-20 upload-image">
+                          <div class="image-wrap">
+
+                            <img ng-if="!profile.prof_image && !profile.provider_image" src="./img/user_default.jpg" id="fbprofileImage"/>
+
+
+                            <img ng-if="!profile.prof_image && profile.provider_image" src="{{profile.provider_image}}" id="fbprofileImage" />
+
+                            <img ng-if="profile.prof_image" src="{{profileImagePath}}{{profile.prof_image}}" id="fbprofileImage" />
+
+                            <img  id="profileImage" width="100" height="100" style="display:none">
+     
+                          </div>
+                      </div>
+                      <div class="col-80">
+                          <div class="list">
+                              <label class="item item-input file-input" ng-click="camerOption()">
+                              <!-- <input type="text" ng-click="takePic()" id="uploadProfilePicButton" placeholder="Profile Picture..."> -->
+                              <input type="text"  placeholder="Profile Picture...">
+                              <span class="input-top">Profile Picture...<i class="icon ion-camera"></i></span>
+                              </label>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="row">
+                    <div class="col-50">
+                      <label class="radio-label">I want to:</label>
+                    </div>
+                    <div class="col-50">
+                      <ul class="custom-radio">
+                       <p>
+                        
+                          <input type="checkbox" id="f-option" ng-model="profile.role[0]" checked   name="postjob" />
+                          <label for="f-option">Post jobs</label>
+                      </p>
+                      <p>
+                          <input type="checkbox" id="s-option" ng-model="profile.role[1]" name="postjob"/>
+                          <label for="s-option">Find jobs</label>
+                      </p>
+                      <div class="form-error" ng-show="profile_form.postjob.$invalid && !profile_form.postjob.$pristine" >Enter a valid Zipcode.
+                          </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="list">
+                         <tags-input ng-model="profile.tags" class="skilltag" name="skill" ng-class="{'has-error':profile_form.skill.$invalid && !profile_form.skill.$pristine}"  placeholder="Skill" add-from-autocomplete-only="true" >
+                          <auto-complete source="loadTags($query)">{{loadTags($query)}}</auto-complete>
+                          </tags-input>
+                         <div ng-show="resultNotFound" class="autocomplete  ng-scope">
+                              <ul class="suggestion-list notfound" >
+                              <li class="suggestion-item-selected not-found">
+                              <em>Not Found</em></li>
+                              </ul>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button  ng-disabled="profile_form.$invalid"  class="button button-block login-btn">
+                         SAVE
+                      </button>
+                    </div>
+              </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="login-footer"><p>© 2016 OddJob. All Rights Reserved.</p></div>
+</ion-content>
+  <!-- <ion-footer class="bar bar-footer login-footer">
+       <p>© 2016 OddJob. All Rights Reserved.</p>
+  </ion-footer> -->
+
+</ion-view>

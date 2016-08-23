@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+.home{ background:url(../img/back-bg.png) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;padding-top:45px}
+.login-header{background:transparent;border:none;}
+.login-header .title{color:#fff;font-size:26px}
+.login-form {text-align:center;padding-top:10px}
+.login-form .title{margin-bottom:5px}
+.login-form .title img{max-width:100%;height:auto}
+.login-form .item{margin-bottom:19px;background-color:transparent;border:2px solid #fefefe;border-radius: 100px;color: #fff;font-size: 30px;font-weight: 300;padding:0 25px;}
+.login-form .item input{color:#fff;font-size:24px;height:100%;font-weight:300;padding:10px 0 9px;line-height: 28px}.login-btn{border-radius:100px;background-color:#4ba75c;color:#fff;font-size:24px;padding:11px 0 9px;margin:-10px auto !important}
+.forget-details a{font-size:16px;color:#fff;text-decoration:none;font-weight:400}
+.forget-details span{font-size:16px;color:#fff;display:inline-block;vertical-align:top;margin-top:-2px}
+.forget-details .toggle .track{height:21px;width:32px}  
+.forget-details .toggle .handle{height:19px;width:18px;top:6px;left:1px;}
+.forget-details .toggle input:checked + .track .handle{left:-7px}
+.login-footer{background:transparent;}
+.login-footer p{font-size:11px;color:#fff;text-align:center;float:left;width:100%}
+input::-moz-placeholder, textarea::-moz-placeholder{color:#fff}
+.or-option:before{width:124px;position:absolute;top:11px;bottom:0;vertical-align:middle;content:' ';background-color:#fff;height:1px;left:0}
+.or-option:after{width:124px;position:absolute;top:11px;bottom:0;vertical-align:middle;content:' ';background-color:#fff;height:1px;right:0}
+  .or-option{position:relative;padding:0 18px;float:left;width:100%;font-size:26px;color:#fff;margin:0px auto 20px}
+.icon-list li{float:left;display:inline-block;width:25%}
+.icon-list {float:left;width:100%;text-align:center;}
+.file-input input{text-indent:-99999px}
+.file-input {position:relative;height:48px}
+.file-input span{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;padding: 5px 25px 0;text-align:left; color: #aaa;font-size: 24px;}
+.input-top i{float:right;color: #fff;font-size: 36px;position: absolute;right: 25px;top: -4px}
+.login-form .item-input textarea{background:transparent;color:#fff;font-size:24px;font-weight:300;padding:10px 0 9px;height:158px}
+.login-form .item.item-input.text-area{border-radius:25px}  
+.custom-radio{list-style: none;height: 100%;width: 100%;margin: 0;padding: 0;}
+.custom-radio li{color: #fff;display: block;position: relative;float: left;width: 100%;height: 30px;}
+.custom-radio li input[type=radio]{position: absolute;visibility: hidden;}
+.custom-radio li label{display: block;position: relative;font-weight: 300;font-size: 1.35em;padding: 0;height: 15px;z-index: 9;cursor: pointer;-webkit-transition: all 0.25s linear;}
+.custom-radio li:hover label{color: #FFFFFF;}
+.custom-radio li .check{border: 2px solid #fff;border-radius: 100%;display: block;height: 15px;left: 20px;position: absolute;top: 7px;transition: border 0.25s linear 0s;width: 15px;z-index: 5;}
+.custom-radio li .check::before {display: block;position: absolute;content: '';border-radius: 100%;height: 15px;width: 15px;top: 0px;left: 0px;margin: auto;transition: background 0.25s linear;  -webkit-transition: background 0.25s linear;}
+input[type=radio]:checked ~ .check {border: 2px solid #fff;}
+input[type=radio]:checked ~ .check::before{background: #fff;top:-2px;left:-2px;}
+input[type=radio]:checked ~ label{color: #fff;}
+.radio-label{color:#fff;font-size:24px}
+.profile-banner {position: relative;margin-bottom:40px}
+.profile-img {border-radius: 50%;bottom: -35px;float: none;height: 100%;left: 0;margin: 0 auto;max-height: 125px;max-width: 125px;position: absolute;right:0;text-align:center;width:100%;}
+.profile-img img{border-radius: 50%;height: auto;max-width: 100%;}
+.user-rating li{width:auto;margin:auto 2.5px;float:none}
+.user-rating li i{font-size:2em;color:#4ba75c}
+.user-detail h2{color:#333333;font-size:31.09px;margin-bottom:2px}
+.user-detail p{color:#666666;font-size:15.55px;margin-bottom:4px}
+.user-status h3{font-size:51.82px;color:#333333}
+.user-status p{font-size:15.55px;color:#4ba75c}
+.user-status{margin-top:20px}
+.title-wrap{padding:4px 7px;border:1px solid #d9d9d9;background-color:#ccc;color:#666666;text-transform:uppercase}
+.skill-tags{padding:0 8px}
+.skill-tags li{border:1px solid #afafaf;padding:6px 10px;margin:3.5px;border-radius:7px;background-color:#fff}
+.your-Reviews{clear:both;float: left;width:100%}
+.your-Reviews .item-avatar{border:none;padding:0}
+.your-Reviews .item-avatar img{max-height:58px;max-width:58px;left:0;top:0}
+.your-Reviews .icon-list{text-align:left}
+.your-Reviews .user-rating li i{ font-size: 1.2em;}
+.your-Reviews h2{font-size:15.55px;color:#666;margin-bottom:0}
+.your-Reviews p {color:#bababa;font-size:12.36px}
+.your-Reviews p span{color:#666;margin-right:5px;font-weight:bold}
+.home-footer{text-align:center}
+.home-footer  i{font-size:2.5em;color:#999999}
+.home-footer .active i{color:#4ba75c}
+.home-footer{padding:5px 0;border-top:1px solid #999999}
+.bar-footer p{font-size:11px;color:#999}
+.bar-footer .active p{color:#4ba75c}
+.job-banner {bottom: 0;left: 0;position: absolute;right: 0;text-align: center;}
+.job-banner h4{font-size:26.34px;color:#fff}
+.job-wrap{margin:0}
+.posted-by {margin-top: -2px;float:left;width:100%;background-color:#e2e2e2;border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0}
+.posted-by > div{float:left;width:50%}
+.left-sec{border-right:1px solid #f0f0f0}
+.right-sec{border-left:1px solid #f0f0f0;text-align:right;padding:19px 10px}
+.left-sec .item{background:transparent;padding-left:5px;border:none}
+.left-sec h6{color:#666;font-size:8px;margin-bottom:0}
+.left-sec h3{color:#666;font-size:19px;font-weight:600;margin:0 auto 5px}
+.loaction i{font-size:18px;color:#9e9e9e;margin-right:6px}
+.loaction img{margin-right:5px;margin-top:3.8px}
+.loaction > span {margin-top: 0;vertical-align: top;color:#666666;font-size:13.17px}
+.right-sec .loaction {margin-bottom:5px;float:left;width:100%}
+.job-desc p{font-size:18.44px;color:#666}
+.add-offer{font-size:18.44;color:#4ba75c;float:right}
+.offers .review-name{font-size:15.8px;color:#333333}
+.div-wrap{margin:10px auto;float:left;width:100%}
+.price-accept {display: inline;float: left;}
+.price, .accept{padding:5px 13px;background-color:#0099ff;color:#fff;text-transform:uppercase;border-radius:5px}
+.next{float:right;diplay:inline}
+.accept{background-color:#4ba75c;border:none}
+.accept:hover{color:#444}
+.next i{font-size:24px;color:#8c8c8c;font-weight:300;margin-right:6px}
+.post-date{float:right;font-size:15.8px;color:#666666}
+.offer-wrap{padding:0 5px}
+.post-job .row{border-top:1px solid #989898;border-bottom:1px solid #989898;margin-bottom:5px;padding:0}
+.post-job .row .col-33{border-right:1px solid #989898;padding:0}
+.post-job .row .col-33:last-of-type{border:none}
+.job-box{position:relative;float:left;width:100%;}
+.job-title{position:absolute;top:40%;left:0;right:0;height:20px;width:81px;background-color:rgba(0, 0, 0, 0.6);float:none;text-align:center;margin:auto}
+.job-head h5{margin:auto;color:#fff;font-size:12.95px;}   .job-title h5{margin:auto;color:#fff;font-size:12.95px; height: 100%;line-height: 19px;}
+.job-wrap .job-banner{bottom:50%}
+.form-wrap {margin-top:-5px;background-color:#e2e2e2;padding:10px 20px}
+.form-wrap .item{border:none}
+.form-wrap .input-label{color:#797979;font-size:18.34px;padding-bottom:8px}
+.form-wrap .item-input{padding:0}
+.form-wrap .file-input{margin:20px 0;height:34px}
+.form-wrap textarea{min-height:115px;border:1px solid #c2c2c2;border-radius:7px}
+.form-wrap input{border:1px solid #c2c2c2;border-radius:7px;padding-left:15px}
+.form-wrap input::-moz-placeholder, .form-wrap textarea::-moz-placeholder{color:#999999;font-size:18px}
+.form-wrap .file-input span{font-size:18px;color:#999999;top:-2px;padding-left:35px}
+.form-wrap .input-top i{font-size:26px;color:#9e9e9e;top:-4px;right:auto;left:8px;}
+.form-wrap .input-top .ion-location{left:10px}
+.form-wrap .img-icon span{padding-left:30px}
+.form-wrap .img-icon span{padding-left:12px}
+.form-wrap .img-icon span img{margin-right:5px}
+.post-job{text-align:center;margin:25px auto 15px;float:left;width:100%}
+.post-job button{width:224px;color:#fff;background-color:#4ca75d;padding:8px 0;border-radius:10px;border:none;font-size:18.14px}
+.custom-radios{text-align:center;}
+.custom-radios > div{display:inline;float:none; background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    margin-left: -5px;
+    padding: 5px 15px}
+.custom-radios input{opacity:0;height: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;padding:0}
+.radio-1 > label {
+  color:#999999;font-size:18.14px
+}
+.custom-radios > .radio-active{background-color:#4ca75d}
+.custom-radios > .radio-active label{color:#fff}
+.accept-offer{text-align:center}
+.accept-offer img{right:0;margin:0 auto}
+.accept-offer .price{display:inline-block}
+.accept-offer .review-name{margin-bottom:20px;margin-top:0}
+.accept-offer p{color:#666;font-size:12px;margin-top:20px}
+.accept-offer .accept{width:197px}
+  .search-bar input{position:relative}
+.search-bar label span{position:absolute;left:0;right:0;text-align:center;top:12px}
+/*custom css */
+.form-error{
+    color: red;
+    font-size: 13px;
+    margin: -19px 4px 2px 17px;
+    float: left;
+    width: 100%;
+    text-align: left;
+}
+
+.toggle{
+  margin:-5px 0 0 0 !important;
+}
+.account{
+  color:#fff;margin:0px 0px 19px 0 !important;
+}
+tags-input .tags{background-color: transparent!important;color: #fff;border-radius:100px;border:2px solid #fff!important; padding: 10px 25px!important}
+tags-input *, tags-input :after, tags-input :before{color: #000}
+tags-input .tags .input{background-color: transparent;color: #fff;font-size:24px!important;}
+.upload-image .item{border:none;}
+.image-wrap{height: 65px;width:65px;border-radius: 50%;margin-top:-10px;}
+.image-wrap img{height: 100%;width:100%;border-radius: 50%}
+p label{color:#fff;font-size:16px;font-weight:normal;margin: 0 30px 0 0}
+.has-error{border: 2px solid red !important;  }
+.col-45{flex: 0 0 45%;
+    margin: 0;
+    max-width: 45%;}
+    .col-55{flex: 0 0 55%;
+    margin: 0;
+    max-width:55%;}
+    .popup-container.active .popup{    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 15px;}
+    .popup-head{    background: #eee;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;}
+    .popup-body{text-align: center!important;}
+    .popup-buttons button{background-color: #4BA75C;color:#fff;border-radius: 25px!important;text-transform: uppercase;}
+.back{font-size: 40px;color:#fff;}
+.customlocation{padding:6px 2px 0px 25px !important}
+/*.has-header{top:22px !important;}*/
+/* custom css*/
+/********************* Updated by Sushil 20 August **************/
+.marg-or{
+  margin: 0px auto 10px !important;
+}
+/********************* Updated by Sushil 20 August **************/
+
+/**********************************************MEDIA**********************************************/
+
+@media (max-width:380px){
+  .custom-radio li .check{left:5px}
+  .login-form .col-80{flex: 0 0 100%;max-width: 100%;margin:0}
+  .login-form  .mobile-size .col-80{flex: 0 0 75%;max-width:75%;margin:0 0 0 10px}
+  .forget-details .toggle{ margin: -5px 0;
+    padding: 5px 0;}
+  }
+
+/**********************************************MEDIA**********************************************/
+@media (max-width:420px){
+  .right-sec{float:left;text-align:left;border-top:1px solid #fff;padding:10px}
+  .right-sec .loaction{margin:0}
+}
+@media (max-width:380px){
+  .posted-by > div {width: 100%;}
+  .custom-radio li .check{left:5px}
+  .login-form .col-80{flex: 0 0 100%;max-width: 100%;margin:0}
+}

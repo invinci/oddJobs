@@ -1,0 +1,84 @@
+
+<ion-view view-title="Register">
+ <ion-header class="bar bar-header login-header">
+<a ui-sref="signin">
+<i class="back ion-ios-arrow-back"></i></a>
+ 
+</ion-header>
+  <ion-content class="home">
+    <div class="login-form">
+      <div class="row">
+          <div class="col-80 col-offset-10">
+            <form name="register_form" id="register_form" class="list" ng-submit="register(user)">
+              <div class="row">
+                    <div class="col">
+                        <div class="title"> <img alt="Company Logo" height="156" src="img/logo.png"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="list">
+                           <label  class="item item-input" ng-class="{'has-error':register_form.email.$invalid && !register_form.email.$pristine}">
+                    <input type="email" ng-model="user.email" required name="email" placeholder="EMAIL">
+        </label>
+        <div class="form-error" ng-show="register_form.email.$invalid && !register_form.email.$pristine" >Enter a valid email.</div>
+
+
+                 <label class="item item-input  form-field" ng-class="{'has-error':register_form.password.$invalid &&  !register_form.password.$pristine}">
+                        <input type="password" required ng-model="user.password" name="password" id="password" ng-pattern="/^([a-zA-Z0-9]*)$/" placeholder="Password" maxlength="8">
+                    </label>
+                    <div class="form-error" ng-show="register_form.password.$dirty && register_form.password.$error.required" >Please enter password.</div>
+                    <div class="form-error" ng-show="register_form.password.$dirty && register_form.password.$error.pattern" >Please do not use special character.</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button ng-disabled="register_form.$invalid" class="button waves-effect waves-blue button-block login-btn">
+                         Register
+                        </button>
+                    </div>
+                </div>
+            </form>
+                <div class="row">
+                    <div class="col">
+                        <p class="or-option">OR</p>
+                    </div>
+                </div>
+
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col">
+              <ul class="icon-list">
+                  <li>
+                      <a ng-click="facebookSignIn()">
+                          <img alt="Social-icons" src="img/facebook.png">
+                        </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                          <img alt="Social-icons" src="img/twitter.png">
+                        </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                          <img alt="Social-icons" src="img/g-plus.png">
+                        </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                          <img alt="Social-icons" src="img/link.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="login-footer"><p>© 2016 OddJob. All Rights Reserved.</p></div>
+  </ion-content>
+ <!--  <ion-footer class="bar bar-footer login-footer">
+       <p>© 2016 OddJob. All Rights Reserved.</p>
+  </ion-footer> -->
+</ion-view>

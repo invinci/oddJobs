@@ -1,0 +1,101 @@
+<ion-view view-title="Profile">
+ <ion-header class="bar bar-header login-header">
+  <a href="javascript:void(0)" class="back-btn"><i class="icon ion-chevron-left"></i></a>
+   <h1 class="title">Profile</h1>
+ </ion-header>
+<ion-content class="home">
+  <div class="login-form">
+    <div class="row">
+      <div class="col-80 col-offset-10">
+        <form name="profile_form" id="profile" class="list" ng-submit="addprofile(profile)">
+            <div class="row">
+              <div class="col">
+                <div class="title"> 
+                  <img alt="Company Logo" height="156" src="img/logo.png">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+
+                <div class="list">
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.firstname.$invalid && (profile_form.firstname.$error.required || !profile_form.firstname.$pristine)}">
+                            <input type="text" ng-pattern="/^[a-zA-Z]*$/" ng-model="profile.first_name"  name="firstname" placeholder="First name" required>
+                          </label>
+                          <div class="form-error" ng-show="profile_form.firstname.$invalid && !profile_form.firstname.$pristine" >
+                               Enter a valid firstname.
+                          </div>
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.lastname.$invalid && (profile_form.lastname.$error.required || !profile_form.lastname.$pristine)}">
+                              <input type="text" ng-pattern="/^[a-zA-Z]*$/" ng-model="profile.last_name"  name="lastname" placeholder="Last name" required>
+                          </label>
+                          <div class="form-error" ng-show="profile_form.lastname.$invalid && !profile_form.lastname.$pristine" >
+                            Enter a lastname.
+                          </div>
+
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.phone.$invalid && (profile_form.phone.$error.required || !profile_form.phone.$pristine)}">
+                              <input type="text" ng-pattern="/^[0-9]*$/" maxlength="14" ng-model="profile.phone"  name="phone" placeholder="Phone" required>
+                          </label>
+                          <div class="form-error" ng-show="profile_form.phone.$invalid && !profile_form.phone.$pristine" >  Enter a valid phone number.
+                          </div>
+
+                          <label  class="item item-input" ng-class="{'has-error':profile_form.zipcode.$invalid && (profile_form.zipcode.$error.required || !profile_form.zipcode.$pristine)}">
+                              <input type="text" ng-pattern="/^[0-9]*$/" maxlength="6" ng-model="profile.zipcode"  name="zipcode" placeholder="Zip code" required>
+                          </label>
+                          <div class="form-error" ng-show="profile_form.zipcode.$invalid && !profile_form.zipcode.$pristine" >
+                            Enter a valid Zipcode.
+                          </div>
+                          <img ng-if="!profile.prof_image" src="{{profile.provider_image}}" id="fbprofileImage" />
+                          <img src="../img/logo.png" id="profileImage" width="100" height="100" style="display:none" >
+                          <label class="item item-input file-input">
+                          <input type="text" ng-click="takePic()" id="uploadProfilePicButton" placeholder="Profile Picture..." class="">
+                          
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-50">
+                      <label class="radio-label">I want to:</label>
+                    </div>
+                    <div class="col-50">
+                        <ul class="custom-radio">
+                          <li>
+                              <input type="checkbox" id="f-option" ng-model="profile.role[0]">
+                              <label for="f-option">Post jobs</label>
+                              <div class="check"></div>
+                          </li>
+                          <li>
+                              <input type="checkbox" id="s-option" ng-model="profile.role[1]">
+                              <label for="s-option">Find jobs</label>
+                              <div class="check"><div class="inside"></div></div>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="list">
+                      <label class="item item-input text-area">
+                          <tags-input ng-model="profile.tags"  add-from-autocomplete-only="true" add-on-paste="false">
+                          <auto-complete source="loadTags($query)">{{loadTags($query)}}</auto-complete>
+                          </tags-input>
+                      </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button  ng-disabled="profile_form.$invalid"  class="button button-block login-btn">
+                         SAVE
+                      </button>
+                    </div>
+              </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>
+  <ion-footer class="bar bar-footer login-footer">
+       <p>© 2016 OddJob. All Rights Reserved.</p>
+  </ion-footer>
+</ion-view>

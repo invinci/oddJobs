@@ -1,0 +1,98 @@
+<ion-view view-title="Post Job">
+ <ion-header class="bar bar-header login-header home-header">
+ 	<a href="javascript:void(0)" class="back-btn"><i class="icon ion-chevron-left"></i></a>
+   <h1 class="title">Home</h1>
+ </ion-header>
+  <ion-content class="home-page">
+    <div class="profile-wrap">
+        <div class="profile-banner job-wrap">
+            <img alt="Profile Banner" src="img/cleanbg.png"  class="full-image"/>
+            <div class="job-banner">
+            	<div class="job-head">
+                    <h5>Cleaning</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row form-wrap">
+            <div class="col">
+                <div class="list">
+                  <label class="item item-input item-stacked-label">
+                    <span class="input-label">Job Title</span>
+                    <input type="text" placeholder="eg. Clean my kitchen">
+                  </label>
+                  <label class="item item-input item-stacked-label">
+                    <span class="input-label">Description</span>
+                    <textarea type="text" placeholder=""></textarea>
+                  </label>
+                  <label class="item item-input item-stacked-label file-input">
+                    <input type="text" placeholder="">
+                    <span class="input-top"><i class="icon ion-camera"></i>Upload Attachment(s)</span>
+                  </label>
+                  <label class="item item-input item-stacked-label file-input">
+
+    <textarea rows="4" placeholder="e.g. 37 Street Road, Downtown, New Jersey" name="place" ng-model="place" ng-change="update(place)" g-places-autocomplete required class="customlocation"></textarea>
+                   <span class="input-top"><i class="icon ion-location"></i></span>
+                  </label>
+                  <div class="custom-radios item-stacked-label">
+                  	<div class="radio-1">
+                    	<input type="radio" />
+                        <label>Online</label>
+                    </div>
+                    <div class="radio-1 radio-active">
+                    	<input type="radio" />
+                    	<label>In Person</label>
+                    	
+                    </div>
+                  </div>
+                  <label class="item item-input item-stacked-label file-input img-icon">
+                    <input type="text" placeholder="">
+                    <span class="input-top"><img src="../img/dollor-icon.png" alt=""/>Budget</span>
+                  </label>
+                  <div class="custom-radios">
+                  	<div class="radio-1 radio-active">
+                    	<input type="radio" />
+                    	<label>Fixed</label>
+                    </div>
+                    <div class="radio-1">
+                    	<input type="radio" />
+                    	<label>Hourly</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-job">
+                    <button class="">Post My Job</button>
+                </div>	
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col">
+            	
+            </div>
+        </div>
+    </div>
+  </ion-content>
+  <ion-footer class="bar bar-footer home-footer">
+     <div class="row">
+     	<div class="col col-20">
+        	<a href="javascript:void(0)" class="tilt"><i class="icon ion-hammer"></i><p>My Jobs</p></a>
+            
+        </div>
+        <div class="col col-20">
+        	<a href="javascript:void(0)"><i class="icon ion-ios-search-strong"></i><p>Find Jobs</p></a>
+            
+        </div>
+        <div class="col col-20">
+        	<a href="javascript:void(0)" class="active"><i class="icon ion-ios-home-outline"></i><p>Home</p></a>
+            
+        </div>
+        <div class="col col-20">
+        	<a href="javascript:void(0)"><i class="icon ion-ios-chatboxes-outline"></i> <p>Message</p></a>
+           
+        </div>
+        <div class="col col-20">
+        	<a href="javascript:void(0)"><i class="icon ion-android-more-horizontal"></i> <p>More</p></a>
+           
+        </div>
+     </div>
+  </ion-footer>
+</ion-view>

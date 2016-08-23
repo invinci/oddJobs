@@ -1,0 +1,48 @@
+<ion-view view-title="Skills">
+ <ion-header class="bar bar-header login-header home-header">
+    <a href="javascript:void(0)" class="back-btn"><i class="icon ion-chevron-left"></i></a>
+   <h1 class="title">Home</h1>
+ </ion-header>
+  <ion-content class="home-page">
+    <div class="post-job">
+
+        <div class="row" ng-repeat="service in products_pages">
+            <div class="col col-33" ng-repeat="skillData in service">
+               <div class="job-box">
+                    <a href="#/app/postjob/{{userData._id}}"><img src="{{skillsImagePath}}{{skillData.image}}" class="full-image"/>
+                    <img  ng-if="!skillData.image" src="../img/noimage2.png" class="full-image"/>
+                    </a>    
+                    <div class="job-title">
+                        <a  href="#/app/postjob/{{userData._id}}"><h5>{{skillData.skill}}</h5></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </ion-content>
+  <ion-footer class="bar bar-footer home-footer">
+     <div class="row">
+        <div class="col col-20">
+            <a href="javascript:void(0)" class="tilt"><i class="icon ion-hammer"></i><p>My Jobs</p></a>
+            
+        </div>
+        <div class="col col-20">
+            <a href="javascript:void(0)"><i class="icon ion-ios-search-strong"></i><p>Find Jobs</p></a>
+            
+        </div>
+        <div class="col col-20">
+            <a href="javascript:void(0)" class="active"><i class="icon ion-ios-home-outline"></i><p>Home</p></a>
+            
+        </div>
+        <div class="col col-20">
+            <a href="javascript:void(0)"><i class="icon ion-ios-chatboxes-outline"></i> <p>Message</p></a>
+           
+        </div>
+        <div class="col col-20">
+            <a href="javascript:void(0)"><i class="icon ion-android-more-horizontal"></i> <p>More</p></a>
+           
+        </div>
+     </div>
+  </ion-footer>
+</ion-view>

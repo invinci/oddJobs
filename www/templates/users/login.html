@@ -1,0 +1,119 @@
+<ion-view view-title="Login">
+<ion-header class="bar bar-header login-header">
+   <h1 class="title">Log In</h1>
+ </ion-header>
+<ion-content class="home">
+    <div class="login-form">
+      <div class="row">
+          <div class="col-80 col-offset-10">
+           <form name="login_form" id="login_form" class="list" ng-submit="login(user)">
+              <div class="row">
+                    <div class="col">
+                        <div class="title"> <img alt="Company Logo" height="156" src="img/logo.png"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                      <div class="list">
+                            <label  class="item item-input" ng-class="{'has-error':login_form.email.$invalid && !login_form.email.$pristine}">
+                             <input type="email" ng-model="user.email" required name="email" placeholder="Email...">
+                            </label>
+                            <div class="form-error" ng-show="login_form.email.$invalid && !login_form.email.$pristine" >Enter a valid email.</div>
+                           
+                          <label class="item item-input" ng-class="{'has-error':login_form.password.$invalid &&  !login_form.password.$pristine}">
+                      <input  type="password" 
+                      placeholder="Password"
+                      name="password"
+                      ng-model="user.password"
+                      required
+                       placeholder="Password"
+                      >
+                  </label>
+                  <div class="form-error" ng-show="login_form.password.$invalid && !login_form.password.$pristine" >Enter a valid password.
+                  </div>
+                        </div>
+                </div>
+              </div>
+                <div class="row">
+                    <div class="col">
+                        <button ng-disabled="login_form.$invalid" class="button button-block login-btn">
+                          Log In
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+          <div class="col">
+                <div class="row forget-details">
+                    <div class="col-45">
+                        <a ui-sref="forgotpassword">Forgot Password ?</a>
+                    </div>
+                    <div class="col-55">
+                    
+                      <span>Remember Me </span>
+                        <label class="toggle">
+                             <input ng-model="user.rememberme" type="checkbox" />
+                             <div class="track">
+                                 <div class="handle"></div>
+                             </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="or-option marg-or">OR</p>
+                    </div>
+                </div>
+
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col">
+              <ul class="icon-list">
+                  <li>
+                      <a ng-click="facebookSignIn()">
+                          <img alt="Social-icons" src="img/facebook.png">
+                        </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                          <img alt="Social-icons" src="img/twitter.png">
+                        </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                          <img alt="Social-icons" src="img/g-plus.png">
+                        </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)">
+                          <img alt="Social-icons" src="img/link.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-80 col-offset-10">
+              <div class="row">
+                    <div class="col">
+                     
+                      <p class="account forget-details"><a ui-sref="register">Don't have an account yet? 
+                          Sign up
+                        </a></p>
+        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-footer"><p>© 2016 OddJob. All Rights Reserved.</p></div>
+  </ion-content>
+ <!--  <ion-footer class="bar bar-footer login-footer">
+       <p>© 2016 OddJob. All Rights Reserved.</p>
+  </ion-footer> -->
+</ion-view>
